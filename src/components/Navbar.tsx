@@ -18,7 +18,6 @@ import {
   Info,
   Business,
   ContactMail,
-  Close,
 } from '@mui/icons-material';
 
 const Navbar = () => {
@@ -52,8 +51,9 @@ const Navbar = () => {
           sx={{
             textTransform: 'none',
             fontWeight: 500,
+            color: 'white',  // Make the text white
             '&:hover': {
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              backgroundColor: 'rgba(255, 255, 255, 0.2)',
             },
           }}
         >
@@ -94,6 +94,10 @@ const Navbar = () => {
               display: 'flex',
               alignItems: 'center',
               py: 1.5,
+              backgroundColor: '#19d2',
+              '&:hover': {
+                backgroundColor: '#155c0',
+              },
             }}
           >
             {item.icon}
@@ -106,16 +110,16 @@ const Navbar = () => {
 
   return (
     <AppBar 
-      position="sticky" 
-      elevation={2}
-      sx={{
-        background: 'linear-gradient(135deg, #1976d2 0%, #1565c0 100%)',
-        backdropFilter: 'blur(10px)',
-      }}
-    >
+  position="fixed" 
+  elevation={2}
+  sx={{
+    background: 'linear-gradient(135deg, #2196f3 0%, #1976d2 100%)',
+    backdropFilter: 'blur(10px)',
+  }}
+>
+
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ minHeight: '64px' }}>
-          {/* Logo/Brand */}
           <Typography
             variant="h6"
             noWrap
@@ -132,27 +136,25 @@ const Navbar = () => {
               fontSize: '1.5rem',
             }}
           >
-            YourBrand
+            SiteName
           </Typography>
 
-          {/* Desktop Navigation */}
           <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
             {renderDesktopMenu()}
           </Box>
 
-          {/* Mobile Navigation */}
           {renderMobileMenu()}
 
-          {/* CTA Button */}
           <Button
             variant="outlined"
             color="inherit"
             sx={{
               ml: 2,
-              borderColor: 'rgba(255, 255, 255, 0.5)',
+              borderColor: 'white',
+              color: 'white',  // Text color for the CTA button
               '&:hover': {
-                borderColor: 'white',
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                borderColor: '#2196f3', 
+                backgroundColor: 'rgba(33, 150, 243, 0.1)',
               },
               display: { xs: 'none', sm: 'block' },
             }}
