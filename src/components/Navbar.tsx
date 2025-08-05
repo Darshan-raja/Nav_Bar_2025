@@ -145,22 +145,37 @@ const Navbar = () => {
 
           {renderMobileMenu()}
 
-          <Button
-            variant="outlined"
-            color="inherit"
-            sx={{
-              ml: 2,
-              borderColor: 'white',
-              color: 'white',  // Text color for the CTA button
-              '&:hover': {
-                borderColor: '#2196f3', 
-                backgroundColor: 'rgba(33, 150, 243, 0.1)',
-              },
-              display: { xs: 'none', sm: 'block' },
-            }}
-          >
-            Get Started
-          </Button>
+          <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>
+            <Button
+              color="inherit"
+              href="/login"
+              sx={{
+                textTransform: 'none',
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              Login
+            </Button>
+            <Button
+              variant="outlined"
+              color="inherit"
+              href="/signup"
+              sx={{
+                borderColor: 'white',
+                color: 'white',
+                textTransform: 'none',
+                '&:hover': {
+                  borderColor: '#2196f3', 
+                  backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                },
+              }}
+            >
+              Sign Up
+            </Button>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
