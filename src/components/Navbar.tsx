@@ -153,7 +153,11 @@ const Navbar = () => {
                 textTransform: 'none',
                 color: 'white',
                 '&:hover': {
+<<<<<<< HEAD
                   backgroundColor: ' transparent',
+=======
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+>>>>>>> 81a4232e69441ae5a21c7126d5a819a6bba0bbe8
                 },
               }}
             >
